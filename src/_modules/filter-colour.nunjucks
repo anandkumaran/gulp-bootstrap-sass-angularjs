@@ -1,0 +1,24 @@
+<div class="product-filter">
+  <h3 class="filter-title js-filter-hide-show">Colour
+    <span class="filter__item--title-arrow"><i class="icon-caret-up"></i></span>
+  </h3>
+  <div class="filter__item-module filter-color">
+    <ul class="filter__item-list-tertiary">
+      <li><a href="javascript:;" title=""><span class="filter-type-color" style="background-color:rgb(0,0,0)"></span></a></li>
+      <li><a href="javascript:;" title=""><span class="filter-type-color" style="background-color:rgb(132,132,132)"></span></a></li>
+      <li><a href="javascript:;" title=""><span class="filter-type-color" style="background-color:rgb(221,280,10)"></span></a></li>
+      <li><a href="javascript:;" title=""><span class="filter-type-color" style="background-color:rgb(103,75,74)"></span></a></li>
+      <li><a href="javascript:;" title=""><span class="filter-type-color" style="background-color:rgb(185,179,143)"></span></a></li>
+      <li><a href="javascript:;" title=""><span class="filter-type-color" style="background-color:rgb(168,22,9)"></span></a></li>
+      <li><a href="javascript:;" title=""><span class="filter-type-color" style="background-color:rgb(255,209,209)"></span></a></li>
+      <li><a href="javascript:;" title=""><span class="filter-type-color" style="background-color:rgb(253,162,69)"></span></a></li>
+      <li><a href="javascript:;" title=""><span class="filter-type-color gray-border" style="background-color:rgb(255,252,255)"></span></a></li>
+      <li><a href="javascript:;" title=""><span class="filter-type-color" style="background-color:rgb(91,179,0)"></span></a></li>
+      <li><a href="javascript:;" title=""><span class="filter-type-color" style="background-color:rgb(209,209,209)"></span></a></li>
+      <li><a href="javascript:;" title=""><span class="filter-type-color" style="background-color:rgb(233,200,189)"></span></a></li>
+      <li><a href="javascript:;" title=""><span class="filter-type-color" style="background-color:rgb(233,120,189)"></span></a></li>
+      <li><a href="javascript:;" title=""><span class="filter-type-color" style="background-color:rgb(120,200,189)"></span></a></li>
+      <li><a href="javascript:;" title=""><span class="filter-type-color" style="background-color:rgb(233,200,000)"></span></a></li>
+    </ul>
+  </div>
+</div>

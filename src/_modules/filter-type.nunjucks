@@ -1,0 +1,18 @@
+<div class="product-filter">
+  <h3 class="filter-title js-filter-hide-show">Type
+    <span class="filter__item--title-arrow"><i class="icon-caret-up"></i></span>
+  </h3>
+  <div class="filter__item-module">
+    <ul class="filter__item-list-secondary filter__scroll">
+      <li><label><input type="checkbox" checked> Boat Neck</label></li>
+      <li><label><input type="checkbox" checked> Cufflink</label></li>
+      <li><label><input type="checkbox" checked> Cufflink Set</label></li>
+      <li><label><input type="checkbox" checked> Droped Neck</label></li>
+      <li><label><input type="checkbox" checked> Fashion Neck</label></li>
+      <li><label><input type="checkbox" checked> Flap Collar Neck</label></li>
+      <li><label><input type="checkbox" checked> Full Sleeve</label></li>
+      <li><label><input type="checkbox" checked> Half Sleeve</label></li>
+      <li><label><input type="checkbox" checked> Without Collar</label></li>
+    </ul>
+  </div>
+</div>

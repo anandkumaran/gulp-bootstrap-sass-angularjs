@@ -1,0 +1,17 @@
+<div class="category-flex-slider">
+	<ul class="slides">
+	  <li><img class="img-responsive" src="/{{config.baseUrl}}images/temp/landing/clp-banner-1.jpg" width="726"></li>
+	  <li><img class="img-responsive" src="/{{config.baseUrl}}images/temp/landing/clp-banner-2.jpg" width="726"></li>
+	  <li><img class="img-responsive" src="/{{config.baseUrl}}images/temp/landing/clp-banner-3.jpg" width="726"></li>
+	  <li><img class="img-responsive" src="/{{config.baseUrl}}images/temp/landing/clp-banner-4.jpg" width="726"></li>
+	</ul>
+</div>
+
+<div class="category-landing-flex-pager">
+	<ul class="slides">
+	  <li><a href="javascript:;" class="slider-thumb"><h4>GREAT OFFERS </h4> <span>Groceries</span></a></li>
+	  <li><a href="javascript:;" class="slider-thumb"><h4>GREAT OFFERS </h4> <span>Fruits</span></a></li>
+	  <li><a href="javascript:;" class="slider-thumb"><h4>GREAT OFFERS </h4> <span>Apparel</span></a></li>
+	  <li><a href="javascript:;" class="slider-thumb"><h4>GREAT OFFERS </h4> <span>Household</span></a></li>
+	</ul>
+</div>

@@ -1,0 +1,76 @@
+<div class="plp-header">
+  <div class="filter-price custom-dropdown filter-mobile-view--hidden js-price-slider">
+    <span class='label'>Price</span>
+    <div class="custom-range-slider">
+      <input class="js-filter-price-range">
+      <p>
+        <a class="button-md-primary js-filter-price-range-cta" href="javascript:;">Apply</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Pricing Dropdown for Mobile/Small screen -->
+  <div class="filter-price filter-mobile-view">
+    <div class="custom-dropdown js-rupee">
+      <select class="filter-sortby">
+        <option>Price</option>
+        <option>₹100 - ₹500</option>
+        <option>₹1000 - ₹2000</option>
+        <option>₹2000 - ₹5000</option>
+        <option selected="">₹3000 - ₹50000</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="filter-discounts custom-dropdown filter-mobile-view--hidden js-discount-slider">
+    <span class='label'>Discounts</span>
+    <div class="custom-range-slider">
+      <input class="js-filter-discount-range">
+      <p>
+        <a class="button-md-primary js-filter-discount-range-cta" href="javascript:;">Apply</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Discount Dropdown for Mobile/Small screen -->
+  <div class="filter-discounts filter-mobile-view">
+    <div class="custom-dropdown">
+      <select class="filter-sortby">
+        <option>Discounts</option>
+        <option>10% - 20%</option>
+        <option>10% - 30%</option>
+        <option>10% - 40%</option>
+        <option>20% - 60%</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="filter-sort-grid">
+    <div class="md-custom-select">
+      <select class="filter-sortby js-filter-sortby">
+        <option>Sort By</option>
+        <option>Popularity</option>
+        <option>Relevance</option>
+        <option>Brands A-Z</option>
+        <option>Brands Z-A</option>
+        <option>Price: Low to High</option>
+        <option selected="">Price: High to Low</option>
+        <option>Offers</option>
+        <option>Savings</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="plp-view-option">
+    <a class="plp-view-option__grid active" href="javascript:;">
+      <i class="icon-view-grid"></i>
+    </a>
+    <a class="plp-view-option__list" href="javascript:;">
+      <i class="icon-view-list"></i>
+    </a>
+  </div>
+
+  <div class="js-mobile-filter mobile-filter-link show-sm-down">
+    <a href="javascript:;" title="">Show Advanced Filter</a>
+  </div>
+</div>

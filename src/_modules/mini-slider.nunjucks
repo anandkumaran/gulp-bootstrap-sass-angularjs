@@ -1,0 +1,12 @@
+
+<div class="slider-variant-wrap">
+  <div class="slider-variant">
+    <ul class="slides">
+      <li><a href="javascript:;" title="S">S</a></li>
+      <li><a href="javascript:;" title="M">M</a></li>
+      <li><a href="javascript:;" title="L">L</a></li>
+      <li><a href="javascript:;" title="XL">XL</a></li>
+      <li><a class="disabled" class="size-large" href="javascript:;" title="XXL">XXL</a></li>
+    </ul>
+  </div>
+</div>

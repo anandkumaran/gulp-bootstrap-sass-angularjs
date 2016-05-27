@@ -1,0 +1,31 @@
+<div class="blurb {% if pageTitle == 'link-mobile' %} blurb--right-border {% elif pageTitle == 'change-password' %} blurb--right-border {% endif %}">
+   <h2 class="blurb__title">{% if pageTitle == 'register' %} Benefits of Sign Up {% elif pageTitle == 'signin' %} Benefits of Sign In {% elif pageTitle == 'OTP' %} Benefits of OTP {% elif pageTitle == 'link-mobile' %} Why Mobile number required ? {% elif pageTitle == 'change-password' %} Change Password {% endif %}</h2>
+   <div class="blurb__img">
+      <img class="img-responsive" src="/{{config.baseUrl}}images/temp/login/login-bag.jpg" alt="">
+  </div>
+
+  <div class="blurb__content clearfix">
+    <p>DMart seeks to be a one-stop shopping destination for entire family, meeting all their daily household needs.</p>
+
+    <p class="margin-reset">DMart offers a wide section of products in the following categories:</p>
+    <div class="blurb__content-left">
+      <ul>
+        <li>Foods</li>
+        <li>Garments</li>
+        <li>Bed and Bath linen</li>
+        <li>Stationery</li>
+        <li>Footwear</li>
+      </ul>
+    </div>
+    <div class="blurb__content-right">
+      <ul>
+        <li>Toiletries and Beauty Products</li>
+        <li>Kitchenware</li>
+        <li>Toys and Games</li>
+        <li>Home Appliances</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+

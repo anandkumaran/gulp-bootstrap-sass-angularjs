@@ -1,0 +1,47 @@
+<div class="dashboard-myorder">
+  <div class="dashboard-myorder--heading">
+    <span>Order No</span><span>Order Date</span><span>Delivery Mode</span>
+    <span class="my-order-date">Delivery Date &amp; Time</span><span class="my-order-amount">Amount</span>
+    <span class="my-order-status">Status</span>
+  </div>
+  {% macro dashboardMyOrder(class, orderNumber='36396JKMLO', orderDate='10 Dec 2015', deliveryMode='Home Delivery', deliveryDate='16 Dec 2015', deliveryTime='10AM - 12PM', amount='1,200', status='yes') %}
+
+  <li class="{{class}} dashboard-myorder--details dashbaord-myorder--undelivered">
+    <span class="my-order-number">
+      <a class="Order Details" href="javascript:;">{{ orderNumber }}</a>
+      <a href="javascript:;" title="Download Invoice"><i class="icon-statement-download"></i></a>
+    </span>
+    <span>{{ orderDate }}</span>
+    <span>{{ deliveryMode }}</span>
+    <span class="my-order-date">{{ deliveryDate }} <br> {{ deliveryTime }}
+    {% if status == 'no' %}
+      <span>
+        <a href="javascript:;" class="button-slot-change">Change</a>
+      </span>
+    {% endif %}
+    </span>
+
+    <span class="my-order-amount"><i class="icon-rupees"></i>{{ amount }}</span>
+    {% if status == 'yes' %}
+      <span class="my-order-status" title="Delivered">
+        Delivered
+      </span>
+      {% else %}
+      <span class="my-order-status">
+        <span class="order-status-process" title="Pick up for Delivery">Pick up for Delivery
+          <span> <a href="javascript:;" class="button-order-track">Track Order</a></span>
+        </span>
+      </span>
+      <a href="javascript:;" class="button-white button-order-cancel" title="Cancel Order">CANCEL ORDER</a>
+    {% endif %}
+  </li>
+  {% endmacro %}
+
+  <ul class="dashboard-myorder-list scroll" id="dashboard-myorder-1">
+    {{ dashboardMyOrder(deliveryMode='Pickup Point', status='no') }}
+    {{ dashboardMyOrder(orderNumber='32223KKKK', orderDate='12 Nov 2015', amount='2,500', deliveryMode='Pickup Point', status='no', deliveryDate='15 Nov 2015') }}
+    {{ dashboardMyOrder(status='no', amount='500', deliveryTime='1PM - 3PM') }}
+    {{ dashboardMyOrder(status='no', deliveryMode="Pickup Point") }}
+    {{ dashboardMyOrder(orderDate='18 Nov 2015') }}
+  </ul>
+</div>

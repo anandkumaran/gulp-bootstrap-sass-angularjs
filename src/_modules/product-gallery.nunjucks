@@ -1,0 +1,53 @@
+<section class="product-gallery product-gallery--vertical">
+	
+	<div class="product-gallery__thumbnails">
+		<div class="product-gallery__thumbnails-prev">
+			<a href="javascript:;">
+				<i class="icon-caret-up"></i>
+			</a>
+		</div>
+		<div class="product-gallery__thumbnails-wrapper">
+			<ul class="slides">
+				{% for thumb in range(1, 8) %}
+					<li><a href="javascript:;" title="" rel="{{ thumb }}" id="js-thumb-{{ thumb }}"><img class="img-responsive" src="/{{config.baseUrl}}images/temp/pdp/pdp-{{ pageTitle }}-thumbnail-{{ thumb }}.jpg" alt=""></a></li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="product-gallery__thumbnails-next">
+			<a href="javascript:;">
+				<i class="icon-caret-down"></i>
+			</a>
+		</div>
+	</div>
+	
+	<div class="product-gallery__panel">
+		<div class="product-details__bulk">
+			<span class="product-details__bulk--btn button-tertiary">Bulk</span>
+		</div>
+		<div class="product-gallery__viewport">
+			<ul class="slides">
+				{% for big in range(1, 8) %}
+					<li id="js-product-img-{{ big }}">
+						<div class="easyzoom easyzoom--overlay">
+							<a href="/{{config.baseUrl}}images/temp/pdp/pdp-{{ pageTitle }}-zoom-{{ big }}.jpg" title=""><img class="img-responsive" src="/{{config.baseUrl}}images/temp/pdp/pdp-{{ pageTitle }}-big-{{ big }}.jpg" alt=""></a>
+						</div>
+					</li>
+				{% endfor %}
+			</ul>
+			<a href="javascript:;" class="product-gallery__panel--zoom">
+				<i class="icon-zoom"></i>
+			</a>
+		</div>
+		<ul class="review-quick clearfix">
+			<li>
+				<div class="user-review__ratings"></div>
+			</li>
+			<li class="review-quick__count">
+				<a href="javascript:;" title="Reviews"><span>3</span> reviews</a>
+			</li>
+			<li class="review-quick__new">
+				<a href="javascript:;" title="Write a Review">Write a Review</a>
+			</li>
+		</ul>
+	</div>
+</section>

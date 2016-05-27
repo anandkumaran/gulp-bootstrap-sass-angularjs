@@ -1,0 +1,75 @@
+<div class="product-filter">
+  <h3 class="filter-title js-filter-hide-show">Category
+  <span class="filter__item--title-arrow"><i class="icon-caret-up"></i></span>
+  </h3>
+
+  <div class="filter__item-module js-filter-category">
+    <h4 class="filter__item--title active">
+    <a href="javascript:;" title="">
+      Men's Clothing
+    </a>
+    </h4>
+    <ul class="filter__item-list">
+      <li> <a href="javascript:;" class="active" title=""> T-Shirt </a>
+      <ul class="filter__sub-item-list">
+        <li> <a href="javascript:;" title=""> Round Neck </a></li>
+        <li> <a href="javascript:;" title=""> Polo Neck </a></li>
+        <li> <a href="javascript:;" title=""> V Neck </a></li>
+        <li> <a href="javascript:;" title=""> Full Sleeves </a></li>
+        <li> <a href="javascript:;" title=""> Value Packs </a></li>
+        <li> <a href="javascript:;" title=""> Round Neck </a></li>
+        <li> <a href="javascript:;" title=""> Polo Neck </a></li>
+        <li> <a href="javascript:;" title=""> V Neck </a></li>
+        <li> <a href="javascript:;" title=""> Full Sleeves </a></li>
+        <li> <a href="javascript:;" title=""> Value Packs </a></li>
+      </ul>
+      </li>
+    </ul>
+
+
+    <h4 class="filter__item--title">
+    <a href="javascript:;" title="">
+      Women's Clothing
+    </a>
+    </h4>
+    <ul class="filter__item-list js-hide-show">
+      <li> <a href="javascript:;" class="active" title=""> T-Shirt </a>
+      <ul class="filter__sub-item-list">
+        <li> <a href="javascript:;" title=""> Round Neck </a></li>
+        <li> <a href="javascript:;" title=""> Polo Neck </a></li>
+        <li> <a href="javascript:;" title=""> V Neck </a></li>
+        <li> <a href="javascript:;" title=""> Full Sleeves </a></li>
+        <li> <a href="javascript:;" title=""> Value Packs </a></li>
+        <li> <a href="javascript:;" title=""> Round Neck </a></li>
+        <li> <a href="javascript:;" title=""> Polo Neck </a></li>
+        <li> <a href="javascript:;" title=""> V Neck </a></li>
+        <li> <a href="javascript:;" title=""> Full Sleeves </a></li>
+        <li> <a href="javascript:;" title=""> Value Packs </a></li>
+      </ul>
+      </li>
+    </ul>
+
+
+    <h4 class="filter__item--title">
+    <a href="javascript:;" title="">
+      Kid's Clothing
+    </a>
+    </h4>
+    <ul class="filter__item-list js-hide-show">
+      <li> <a href="javascript:;" class="active" title=""> T-Shirt </a>
+      <ul class="filter__sub-item-list">
+        <li> <a href="javascript:;" title=""> Round Neck </a></li>
+        <li> <a href="javascript:;" title=""> Polo Neck </a></li>
+        <li> <a href="javascript:;" title=""> V Neck </a></li>
+        <li> <a href="javascript:;" title=""> Full Sleeves </a></li>
+        <li> <a href="javascript:;" title=""> Value Packs </a></li>
+        <li> <a href="javascript:;" title=""> Round Neck </a></li>
+        <li> <a href="javascript:;" title=""> Polo Neck </a></li>
+        <li> <a href="javascript:;" title=""> V Neck </a></li>
+        <li> <a href="javascript:;" title=""> Full Sleeves </a></li>
+        <li> <a href="javascript:;" title=""> Value Packs </a></li>
+      </ul>
+      </li>
+    </ul>
+  </div>
+</div>

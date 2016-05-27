@@ -1,0 +1,137 @@
+{% macro productDetails(pageTitle, productTitle, brandName, productCode, free, savePrice, dmartPrice) %}
+<div class="product-details product-details--{{ pageTitle }}">
+	<h1 class="product-details--title">{{ productTitle }}
+	<!-- Food Type -->
+    {% if pageTitle == 'grocery' %}
+    <div class="food-type food-type-pdp">
+      <!-- For Veg type -->
+      <span class="egg-food">
+        <i class="icon-egg icon-circle"></i>
+      </span>
+      <!-- For Veg type -->
+      <!-- <span class="veg-food">
+        <i class="icon-veg icon-circle"></i>
+      </span> -->
+
+      <!-- <span class="non-veg-food">
+      <i class="icon-non-veg icon-circle"></i>
+      </span> -->
+    </div>
+    {% endif %}
+  </h1>
+	<h2 class="product-details--brand-name">  <a href="javascript:;" title="">{{ brandName }}</a></h2>
+	<h4 class="product-details--code">
+
+  Product Code: {{ productCode }}</h4>
+  <div class="product-listing__save">save <span class="product-listing__save--price"><i class="icon-rupees"></i>{{ savePrice }}</span></div>
+	<div class="product-details__offer">
+		<span class="product-details__offer--btn button-secondary">Free</span> <span>{{ free }}</span>
+	</div>
+  {% if pageTitle == 'apparel' %}
+  <p class="pdp-offer-text">
+  <a href="javascript:;" title="Click here to select free product">Click here</a> to select free product
+  </p>
+  {% endif %}
+	<h4 class="product-details__option-primary--label">
+	{% if pageTitle == 'apparel' %} Size <a data-target="sizeGuideModal" class="modal-link" href="javascript:;">Size Guide</a>{% else %} Variant {% endif %}
+	</h4>
+
+	<div class="slider-variant-wrap">
+		<div class="slider-variant ">
+			<ul class="slides">
+				{% if pageTitle == 'apparel' %}
+					{% for size in ['S','M','L','XL','XXL','XXXL','XXXXL'] %}
+						<li><a href="javascript:;" title="{{ size }}">{{ size }} <span class="product-unit">(<span class="product-unit-count">1</span>)</span></a><span class="product-details__change-qty" href="#" title="Change Quantity">Change Qty.</span></li>
+					{% endfor %}
+				{% elif pageTitle == 'grocery' %}
+					{% for variant in ['100gm','250gm','300gm','500gm', '1kg', '2kg','5kg'] %}
+						<li><a href="javascript:;" title="{{ variant }}">{{ variant }} <span class="product-unit">(<span class="product-unit-count">1</span>)</span></a><span class="product-details__change-qty" href="#" title="Change Quantity">Change Qty.</span></li>
+					{% endfor %}
+				{% else %}
+					{% for variant in ['1.0L to 1.99L','2.0L to 2.99L','3.0L to 3.99L','4.0L to 4.99L','5.0L to 5.99L'] %}
+						<li><a href="javascript:;" title="{{ variant }}">{{ variant }} <span class="product-unit">(<span class="product-unit-count">1</span>)</span></a><span class="product-details__change-qty" href="#" title="Change Quantity">Change Qty.</span></li>
+					{% endfor %}
+				{% endif %}
+			</ul>
+		</div>
+	</div>
+
+	{% if pageTitle == 'apparel' %}
+	<div class="product-details__option-secondary">
+    <ul class="plp-apparel__color-pallette">
+      <li class="selected"><a href="javascript:;"><img class="img-responsive" src="/{{config.baseUrl}}images/temp/pdp/pdp-icons-1.png" alt=""></a></li>
+      <!-- To disable the color add '.js-disabled' and '.disabled' -->
+      <li class="disabled"><a href="javascript:;"><img class="img-responsive" src="/{{config.baseUrl}}images/temp/pdp/pdp-icons-2.png" alt=""></a></li>
+      <li><a href="javascript:;"><img class="img-responsive" src="/{{config.baseUrl}}images/temp/pdp/pdp-icons-3.png" alt=""></a></li>
+      <li><a href="javascript:;"><img class="img-responsive" src="/{{config.baseUrl}}images/temp/pdp/pdp-icons-4.png" alt=""></a></li>
+      <li><a href="javascript:;"><img class="img-responsive" src="/{{config.baseUrl}}images/temp/pdp/pdp-icons-5.png" alt=""></a></li>
+      <li><a href="javascript:;"><img class="img-responsive" src="/{{config.baseUrl}}images/temp/pdp/pdp-icons-6.png" alt=""></a></li>
+    </ul>
+	</div>
+	{% endif %}
+
+  <h6 class="quick-product-cart js-show-cart-count">Added to Cart <span class="cart-icon"><i class="icon-cart"></i> <span class="quick-product-cart--count badge">1</span></span></h6>
+  <h6 class="quick-product-cart quick-product-delivery">Home Delivery Only <i class="icon-home"></i></h6>
+
+  <!-- display '.quick-product-available' if product available PUP only -->
+  <h6 class="quick-product-cart quick-product-available">Available PUP Only <i class="icon-package"></i></h6>
+
+  <!-- display '.quick-product-not-cod' if product not available for COD -->
+  <h6 class="quick-product-cart quick-product-not-cod">Not Available for COD<i class="icon-unavailable-cod"></i></h6>
+
+	<div class="pdp-price-panel">
+		<h3 class="pdp-price-panel__price-mrp">MRP <span class="strike-diagonal"><i class="icon-rupees"></i>150</span></h3>
+		<h3 class="pdp-price-panel__primary">DMart <span class="pdp-price-panel__primary--price-dmart"><i class="icon-rupees"></i>{{ dmartPrice }}</span></h3>
+
+    <div class="pdp-price-total">
+      <h3 class="pdp-price-total__savings">Your Savings <span><i class="icon-rupees"></i>225</span></h3>
+      <h3 class="pdp-price-total__price">Total Price <span><i class="icon-rupees"></i>325</span></h3>
+    </div>
+	</div>
+
+	<div class="product-details__btn">
+    {% if pageTitle == 'grocery' %}
+      <a class="product-details__btn-coming-soon button-primary" href="javascript:;" title="Coming Soon">
+      Coming Soon</a>
+    {% elif pageTitle == 'apparel' %}
+      <a class="product-details__btn-addtocart button-primary" href="javascript:;" title="Add to Cart">
+      <i class="icon-cart"></i> Add to Cart</a>
+    {% else %}
+      <!-- To disable the button add '.js-disabled' and '.disabled' -->
+  		<a class="product-details__btn-addtocart button-primary js-disabled disabled" href="javascript:;" title="Add to Cart">
+  		<i class="icon-cart"></i>	Add to Cart</a>
+    {% endif %}
+    <a href="javascript:;" class="product-details__btn-viewcart button-primary" title="View Cart">
+    <i class="icon-cart"></i> View Cart</a>
+		<div class="product-details__btn-quantity">
+			<span class="product-details__btn-quantity-label">Quantity</span>
+			<div class="md-custom-select">
+				<select class="product-details__btn-quantity--add">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+				</select>
+			</div>
+		</div>
+		<div class="product-details__btn--addtocart-popup">
+		Please select	{% if pageTitle == 'apparel' %} size {% else %} variant {% endif %}
+		</div>
+		<a class="product-details__btn-add-more button-primary" href="javascript:;">
+			<i class="icon-plus"></i> Add More
+		</a>
+	</div>
+
+	{% if pageTitle == 'grocery' %}
+	<div class="product-details__additional-note">
+  	Unit Price <i class="icon-rupees"></i>10 Per - 100gm
+  </div>
+  {% endif %}
+
+	<div class="product-details__addtolist">
+		<a href="javascript:;" title="Add to List"><i class="icon-document-add"></i> <u>Add to List</u></a>
+	</div>
+
+  {% include '_modules/add-to-shop-list.nunjucks' %}
+</div>
+{% endmacro %}

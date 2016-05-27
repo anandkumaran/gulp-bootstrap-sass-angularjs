@@ -1,0 +1,25 @@
+<div class="cart-summary delivery-address">
+  <h4 class="cart-summary--title cart-summary--title-secondary">Delivery Information</h4>
+  <div class="cart-summary__details js-perfectscrollbar-destroy">
+    <div class="cart-summary__details--primary">
+      <div class="delivery-address--container">
+        <h4 class="delivery-address--title-secondary">Delivery Address:</h4>
+        <address class="delivery-address-details order-confirmation-delivery-info">
+          <strong>Michael M. Cruz</strong><br>
+          Orchad Avenue, Powai, Mumbai - 400076 <br>
+          <p class="spacing-bottom-half"></p>
+          <strong>Mobile:</strong> +91-1234567890
+        </address>
+        <div class="delivery-address-pup">
+          <h4 class="delivery-address--title-ternary"><strong>Delivery Type Selected:</strong> Home Delivery</h4>
+          <h4 class="delivery-address--pup-info"><strong>Delivery Time Selected:</strong> 9AM to 12PM
+          <a class="modal-link" data-target="dashboardSlotChange" href="javascript:;"><i class="icon-pencil"></i></a></h4>
+        </div>
+        <div class="delivery-address--payment padding-reset-top">
+          <h4 class="delivery-address--payment-info"><strong>Payment Mode:</strong> Internet Banking</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

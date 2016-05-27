@@ -1,0 +1,22 @@
+
+<header class="checkout-header header-component__primary">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-2 col-sm-3">
+        {% include '_modules/logo.nunjucks' %}
+      </div>
+      <div class="col-xs-6 col-xs-push-4 col-sm-push-3 col-md-3 col-md-push-6 col-lg-2 col-lg-push-7">
+        {% include '_modules/delivery-code.nunjucks' %}
+      </div>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <div class="row">
+    {% include '_modules/progress-indicator.nunjucks' %}
+  </div>
+</div>
+
+{% include '_modules/modal-location.nunjucks' %}
+{% include '_modules/modal-address-new.nunjucks' %}
+{% include '_modules/modal-address-edit.nunjucks' %}

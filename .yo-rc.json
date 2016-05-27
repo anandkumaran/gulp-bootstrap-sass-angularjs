@@ -1,0 +1,12 @@
+{
+  "generator-yeogurt": {
+    "config": {
+      "projectName": "DMart",
+      "htmlOption": "nunjucks",
+      "cssOption": "sass",
+      "sassSyntax": "scss",
+      "testFramework": "jasmine"
+    },
+    "version": "1.2.6"
+  }
+}

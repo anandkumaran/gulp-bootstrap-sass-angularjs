@@ -1,0 +1,136 @@
+<div class="cart-summary-delivery js-cart-summary-delivery">
+  <div class="cart-summary-delivery--header">
+    <h4 class="cart-summary-delivery--title">Shopping Cart Summary</h4>
+    <h3 class="minicart-details--total-items">
+      <i class="icon-cart"></i> <span>4</span> items
+    </h3>
+  </div>
+  <div class="cart-details__item mini-cart-details cart-details__item-fixed">
+    <div class="cart-details__scroll cart-details__scroll-secondary">
+      <h3 class="cart-details__item--title">
+      <a href="javascript:;" title="">
+        Apparel <span>3 items</span><span class="cart-details__item--title-arrow"><i class="icon-caret-down"></i></span>
+      </a>
+      </h3>
+      <ul class="cart-details__item-list">
+        {% from '_modules/cart-summary-delivery-items.nunjucks' import myCartItems %}
+        {{ myCartItems(type='apparel', id='1', product='Yellow Round Neck T-Shirt', brand='Newport', variant='L', mrp='400', dmartprice='286', save='125') }}
+        {{ myCartItems(type='apparel', id='2', product='Blue Round Neck T-Shirt', brand='Newport', variant='XL', mrp='415', dmartprice='400', save='100', free='true') }}
+
+        <li class="cart-no-items">
+          <p class="alert alert-danger text-center">No items in this section</p>
+        </li>
+      </ul>
+      <h3 class="cart-details__item--title">
+      <a href="javascript:;" title="">
+        Grocery <span>2 items</span><span class="cart-details__item--title-arrow"><i class="icon-caret-down"></i></span>
+      </a>
+      </h3>
+      <ul class="cart-details__item-list">
+        {% from '_modules/cart-summary-delivery-items.nunjucks' import myCartItems %}
+        {{ myCartItems(type='grocery', id='1', product='India Gate Basmadi Rice', brand='India Gate', variant='1kg', mrp='400', dmartprice='286', save='125') }}
+        {{ myCartItems(available='false', type='grocery', id='2', product='Deep Chana Daal', brand='Deep', variant='500mg', mrp='415', dmartprice='400', save='100') }}
+
+        <li class="cart-no-items">
+          <p class="alert alert-danger text-center">No items in this section</p>
+        </li>
+      </ul>
+    </div>
+
+      <h3 class="cart-details__item--title active cart-details__item--total cart-details__item--bottom">
+      <a href="javascript:;" title="">
+        <span class="cart-details__item--total-text"> Cart Total </span> <span class="cart-summary--price text-total"><i class="icon-rupees"></i>92,500</span><span class="cart-details__item--title-arrow"><i class=""></i></span>
+      </a>
+      </h3>
+
+      <ul class="cart-details__item-list mini-cart-details__item-list cart-details__item--bottom-list">
+         <!-- Cart summary Amount -->
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="mini-cart-summary__price-details last">
+              <div class="row">
+                <div class="col-xs-8">
+                  <span>Discount (-)</span>
+                </div>
+                <div class="col-xs-4">
+                  <div class="mini-cart-summary--price"><i class="icon-rupees"></i>999</div>
+                </div>
+              </div>
+            </div>
+            <div class="mini-cart-summary__price-details">
+              <div class="row">
+                <div class="col-xs-8">
+                  <span>Subtotal</span>
+                </div>
+                <div class="col-xs-4">
+                  <div class="mini-cart-summary--price"><i class="icon-rupees"></i>1,000</div>
+                </div>
+              </div>
+            </div>
+            <div class="mini-cart-summary__price-details last">
+              <div class="row">
+                <div class="col-xs-8">
+                  <span>Delivery Charges (+)</span>
+                </div>
+                <div class="col-xs-4">
+                  <div class="mini-cart-summary--price"><i class="icon-rupees"></i>1,500</div>
+                </div>
+              </div>
+            </div>
+            <div class="min-cart-summary--price-total">
+              <div class="row">
+                <div class="col-xs-8">
+                  <span>Total</span>
+                </div>
+                <div class="col-xs-4">
+                  <div class="price-total"><i class="icon-rupees"></i>12,000</div>
+                </div>
+              </div>
+            </div>
+            <div class="mini-cart-summary__price-details--ewallet">
+              <div class="row">
+                <div class="col-xs-8">
+                  <span>DMart eWallet Debit (-)</span>
+                </div>
+                <div class="col-xs-4">
+                  <div class="price-details--ewallet"><i class="icon-rupees"></i>200</div>
+                </div>
+              </div>
+            </div>
+            <div class="mini-cart-summary__price-details-vat">
+            VAT of <i class="icon-rupees"></i>1,000 has been included in total amount
+            </div>
+          </div>
+        </div>
+         <!--End Cart summary Amount  -->
+        <li class="cart-no-items">
+          <p class="alert alert-danger text-center">No items in this section</p>
+        </li>
+      </ul>
+
+    <div class="add-to-cart-button">
+      <div class="row">
+        <div class="col-xs-3 text-center">
+          <i class="dmart-sprite sprite-piggy-bank"></i>
+        </div>
+        <div class="col-xs-9 padding-reset-left">
+          <div class="cart-summary__price-details add-to-cart-button--total-savings">
+            <div class="row">
+              <div class="col-xs-6">
+                <span class="total-savings-text">Total Savings</span>
+                <span class="cart-summary--price total-savings-price"><i class="icon-rupees"></i>500</span>
+              </div>
+              <div class="col-xs-6">
+                <div class="text-payable">
+                  <span>Total Payable</span>
+                  <span class="cart-summary--price text-payable-price"><i class="icon-rupees"></i>17,000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
