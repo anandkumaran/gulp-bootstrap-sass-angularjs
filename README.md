@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # DMart
 
 > Avenue eCommerce Limited (AEL) owns and operates hypermarkets and supermarkets by the store name DMart. DMart seeks to be a one-stop shopping destination for the entire family, meeting all their daily household needs. A wide selection of home utility products is offered, including foods, toiletries, beauty products, garments, kitchenware, bed and bath linen, home appliances and much more.
@@ -67,3 +68,7 @@ Here are the steps to Code Drop and Releases
 #### Notes
 
 † We stopped writing test codes altogether after the initial scaffold. This is due to the fact that it will add-up excessive impact to the timeline, in magnitudes of a minimum timeline being double the time taken to write production codes.
+=======
+# gulp-bootstrap-sass-angularjs
+AngularJs project with Bootstrap Sass and Gulp setup
+>>>>>>> 448ca7910cdb3682f3757c3b403006884aef7aa0
