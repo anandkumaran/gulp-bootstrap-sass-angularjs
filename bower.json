@@ -23,6 +23,7 @@
     "tests"
   ],
   "dependencies": {
+    "bourbon": "~4.2.4",
     "jquery": "~1.11.3",
     "normalize-scss": "~3.0.3",
     "jquery-validation": "~1.14.0",

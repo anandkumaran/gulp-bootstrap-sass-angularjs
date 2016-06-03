@@ -3,6 +3,8 @@
 //
 //## Brand colors for use across Bootstrap.
 
+@import 'bourbon/app/assets/stylesheets/bourbon';
+
 
 $brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
 $brand-success:         #5cb85c !default;
@@ -18,3 +20,9 @@ $brand-danger:          #d9534f !default;
 $body-bg:               #ccc;
 //** Global text color on `<body>`.
 $text-color:            $gray-dark !default;
+
+$font-family-icons      : '4uidev-icons';
+
+// paths
+$path-images         : '../images/';
+$path-fonts          : '../fonts/';

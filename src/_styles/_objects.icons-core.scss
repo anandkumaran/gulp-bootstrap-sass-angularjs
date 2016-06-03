@@ -1,0 +1,24 @@
+
+@include font-face('#{$font-family-icons}', '#{$path-fonts}#{$font-family-icons}', $file-formats: eot ttf woff);
+
+// @include font-face('#{$font-family-rupee}', '#{$path-fonts}#{$font-family-rupee}', $file-formats: eot ttf woff);
+
+[class^="icon-"], [class*=" icon-"] {
+  speak: none;
+  text-transform: none;
+  line-height: 1;
+
+  font-family: $font-family-icons;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+
+  // smoothen the fonts
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  // always position it in the middle
+  vertical-align: middle;
+}
+
+@import 'objects.icons';

@@ -15,7 +15,7 @@
 		<div ng-controller='mainController'>
 			<div class="row">
 				<div class="col-xs-12 col-md-4">
-					<span>Name: {{ employee.firstName }}</span>
+					<span>Name: {{ employee.firstName }} <i class="icon-user"></i></span>
 				</div>
 				<div class="col-xs-12 col-md-4">
 					<span>Designation: {{ employee.designation }}</span>
@@ -23,7 +23,12 @@
 				<div class="col-xs-12 col-md-4">
 					<a href="javascript:;" title=""><img ng-src="{{ employee.profile }}" alt="" height="100"></a>
 				</div>
-	    </div>
+	    	</div>
+
+	    	<p><button onclick="clickCounter()" type="button">Click me!</button></p>
+<div id="result"></div>
+<p>Click the button to see the counter increase.</p>
+<p>Close the browser tab (or window), and try again, and the counter is reset.</p>
 		</div>
 	</div>
 <!-- build:js /scripts/main.js -->
@@ -34,6 +39,37 @@
 
 <!-- endbower -->
 <script src="scripts/script.js"></script>
+<script>
+	function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (sessionStorage.clickcount) {
+            sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+        } else {
+            sessionStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+var car = new Car('Porsche boxter');
+function Car (desc) {
+    this.desc = desc;
+    this.color = "red";
+}
+ 
+Car.prototype.getInfo = function() {
+    return 'A ' + this.color + ' ' + this.desc + '.';
+};
+
+console.log(typeof Car);
+console.log(car.getInfo());
+
+var bike =  Object();
+console.log(typeof bike);
+
+
+</script>
 <!-- endbuild -->
 </body>
 </html>
