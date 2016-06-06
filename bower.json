@@ -1,10 +1,9 @@
 {
-  "name": "dmart",
+  "name": "4UIdev",
   "version": "1.0.0",
-  "homepage": "http://www.dmartindia.com/",
+  "homepage": "http://www.4uidev.com/",
   "authors": [
-    "Brajeshwar, http://brajeshwar.me",
-    "Razorfish, http://razorfish.com"
+    "Anand, http://4uidev.com"
   ],
   "moduleType": [
     "amd",
@@ -12,7 +11,7 @@
     "node"
   ],
   "keywords": [
-    "dmart"
+    "For UI Developer"
   ],
   "license": "Commercial",
   "ignore": [

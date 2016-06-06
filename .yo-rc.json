@@ -1,7 +1,7 @@
 {
   "generator-yeogurt": {
     "config": {
-      "projectName": "DMart",
+      "projectName": "4UIdev",
       "htmlOption": "nunjucks",
       "cssOption": "sass",
       "sassSyntax": "scss",

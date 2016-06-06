@@ -1,7 +1,0 @@
-<div class="logo">
-  <a href="/" title="DMart">
-    <img class="logo--large img-responsive" src="/{{config.baseUrl}}images/dmart-logo.svg" alt="DMart">
-    <img class="logo--medium img-responsive" src="/{{config.baseUrl}}images/dmart-logo.png" alt="DMart">
-    <img class="logo--small img-responsive" src="/{{config.baseUrl}}images/dmart-symbol-logo.png" alt="DMart">
-  </a>
-</div>

@@ -1,4 +1,103 @@
 
+$asset-pipeline: false !default;
+
+@mixin font-face(
+  $font-family,
+  $file-path,
+  $weight: normal,
+  $style: normal,
+  $asset-pipeline: $asset-pipeline,
+  $file-formats: eot woff ttf svg) {
+
+  $font-url-prefix: font-url-prefixer($asset-pipeline);
+
+  @font-face {
+    font-family: $font-family;
+    font-style: $style;
+    font-weight: $weight;
+
+    src: font-source-declaration(
+      $font-family,
+      $file-path,
+      $asset-pipeline,
+      $file-formats,
+      $font-url-prefix
+    );
+  }
+}
+
+// Used for creating the source string for fonts using @font-face
+// Reference: http://goo.gl/Ru1bKP
+
+@function font-url-prefixer($asset-pipeline) {
+  @if $asset-pipeline == true {
+    @return font-url;
+  } @else {
+    @return url;
+  }
+}
+
+@mixin retina-image($filename, $background-size, $extension: png, $retina-filename: null, $retina-suffix: _2x, $asset-pipeline: $asset-pipeline) {
+  @if $asset-pipeline {
+    background-image: image-url("#{$filename}.#{$extension}");
+  } @else {
+    background-image:       url("#{$filename}.#{$extension}");
+  }
+
+  @include hidpi {
+    @if $asset-pipeline {
+      @if $retina-filename {
+        background-image: image-url("#{$retina-filename}.#{$extension}");
+      } @else {
+        background-image: image-url("#{$filename}#{$retina-suffix}.#{$extension}");
+      }
+    } @else {
+      @if $retina-filename {
+        background-image: url("#{$retina-filename}.#{$extension}");
+      } @else {
+        background-image: url("#{$filename}#{$retina-suffix}.#{$extension}");
+      }
+    }
+
+    background-size: $background-size;
+  }
+}
+
+
+@function font-source-declaration(
+  $font-family,
+  $file-path,
+  $asset-pipeline,
+  $file-formats,
+  $font-url) {
+
+  $src: ();
+
+  $formats-map: (
+    eot:   "#{$file-path}.eot?#iefix" format("embedded-opentype"),
+    // woff2: "#{$file-path}.woff2" format("woff2"),
+    woff:  "#{$file-path}.woff" format("woff"),
+    ttf:   "#{$file-path}.ttf" format("truetype"),
+    svg:   "#{$file-path}.svg##{$font-family}" format("svg")
+  );
+
+  @each $key, $values in $formats-map {
+    @if contains($file-formats, $key) {
+      $file-path: nth($values, 1);
+      $font-format: nth($values, 2);
+
+      @if $asset-pipeline == true {
+        $src: append($src, font-url($file-path) $font-format, comma);
+      } @else {
+        $src: append($src, url($file-path) $font-format, comma);
+      }
+    }
+  }
+
+  @return $src;
+}
+
+
 @include font-face('#{$font-family-icons}', '#{$path-fonts}#{$font-family-icons}', $file-formats: eot ttf woff);
 
 // @include font-face('#{$font-family-rupee}', '#{$path-fonts}#{$font-family-rupee}', $file-formats: eot ttf woff);
@@ -19,6 +118,28 @@
 
   // always position it in the middle
   vertical-align: middle;
+}
+
+.icon-circle {
+  border-radius: $border-radius-rounded;
+  color: #fff;
+  width: $icon-size;
+  height: $icon-size;
+  display: inline-block;
+  text-align: center;
+  line-height: $icon-size;
+}
+
+.icon-fb-styles {
+  background-color: #4c769a;
+}
+
+.icon-gp-styles {
+  background-color: #dd4b39;
+}
+
+.icon-tw-styles {
+  background-color: #55acee;
 }
 
 @import 'objects.icons';

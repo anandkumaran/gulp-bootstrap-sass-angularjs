@@ -11,7 +11,7 @@ export default function(gulp, plugins, args, config, taskTarget, browserSync) {
   gulp.task('iconFonts', () => {
     gulp.src(path.join(dirs.source, dirs.icons, '*.svg'))
       .pipe(iconFont({
-        fontName: 'dmart-icons',
+        fontName: '4uidev-icons',
         normalize: true,
         fontWeight: 1001
       }))
