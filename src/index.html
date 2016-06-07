@@ -9,7 +9,6 @@
 <link rel="stylesheet" href="styles/main.css" media="all">
 
 </head>
-
 <body ng-app="mainModule">
 	<div class="container">
 		<div ng-controller='mainController'>
@@ -27,7 +26,7 @@
 
 	    	<p><button onclick="clickCounter()" type="button">Click me!</button></p>
 <div id="result"></div>
-<p>Click the button to see the counter increase.</p>
+<p><a href="javascripti:;">Click the button</a> to see the counter increase.</p>
 <p>Close the browser tab (or window), and try again, and the counter is reset.</p>
 		</div>
 	</div>
@@ -38,39 +37,30 @@
 <script src="_bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
 
 <!-- endbower -->
+<script src="scripts/angular.js"></script>
 <script src="scripts/script.js"></script>
 <script>
-	function clickCounter() {
-    if(typeof(Storage) !== "undefined") {
-        if (sessionStorage.clickcount) {
-            sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
-        } else {
-            sessionStorage.clickcount = 1;
-        }
-        document.getElementById("result").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
-    } else {
-        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-    }
-}
-var car = new Car('Porsche boxter');
-function Car (desc) {
-    this.desc = desc;
-    this.color = "red";
-}
+
+		$('span').uidev({
+			color: 'blue'
+		});
+		(function( $ ) {
  
-Car.prototype.getInfo = function() {
-    return 'A ' + this.color + ' ' + this.desc + '.';
-};
+    $.fn.showLinkLocation = function() {
+  		this.filter( "a" ).each(function() {
 
-console.log(typeof Car);
-console.log(car.getInfo());
-
-var bike =  Object();
-console.log(typeof bike);
-
-var b;
-console.log($('.contain').width());
-
+    	console.log(typeof this);
+            var link = $( this );
+            link.append( " (" + link.attr( "href" ) + ")" );
+        });
+ 
+        return this;
+    };
+ 
+}( jQuery ));
+ 
+// Usage example:
+$( "a" ).showLinkLocation();
 </script>
 <!-- endbuild -->
 </body>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="listViewer">
+<head>
+    <title>List Viewer on Angular JS</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.19/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.19/angular-route.min.js"></script>
+    <script src="https://www.thechels.uk/lister/js/app.js"></script>
+    <script src="https://www.thechels.uk/lister/js/filmController.js"></script>
+    <script src="https://www.thechels.uk/lister/js/seenController.js"></script>
+    <script src="https://www.thechels.uk/lister/js/macController.js"></script>
+    <script src="https://www.thechels.uk/lister/js/iosController.js"></script>
+    <script src="https://www.thechels.uk/lister/js/lister.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://www.thechels.uk/lister/css/styles.css">
+    <link rel="stylesheet" href="https://www.thechels.uk/lister/css/github-light.css">
+    <link rel="stylesheet" href="https://www.thechels.uk/lister/css/bs-form.css">
+<style>
+    body { font-family: monaco, consolas; font-size: 0.875em;}
+    .wrapper { width:900px; margin: auto auto; }
+</style> 
+</head>
+<body>
+    <div class="wrapper">
+        <h1>List Viewer</h1>
+        <p>An Angular JS proof-of-concept project to display data from an API. A list of films and teams seen, as 
+        well as my favourite Mac and iOS apps that would form the basis of any new fruit based product.</p>
+        <div ng-view></div>
+    </div>
+</body>
+</html>

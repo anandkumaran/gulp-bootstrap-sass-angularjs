@@ -1,0 +1,53 @@
+<!doctype html>
+<html ng-app="listViewer">
+  <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <title>{{ ListTitle }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/github-light.css">
+        <script src="js/angular.js"></script>
+        <script src="js/app.js"></script>
+        <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+  </head>
+  <body ng-controller = "iosController">
+    <div class="wrapper">
+      <h3>{{ listTitle }}</h3>
+
+        <p>
+            <a href="#/film">Films</a> |
+            <a href="#/teams">Teams</a> |
+            <a href="#/mac">Mac Apps</a> |
+            <a href="#/ios">iOS Apps</a>
+        </p>
+
+        <p>{{ error }}</p>
+
+        <form>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-addon"><i class="fa fa-search"></i></div>
+              <input type="text" class="form-control" placeholder="Search App" ng-model="searchApp">
+            </div>      
+          </div>
+        </form>
+
+        <table class="tablesorter" ng-repeat="datas in data" ng-hide="!$first">
+        <thead>
+          <tr>
+            <th>Name</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in datas | filter:searchApp">
+              <td>{{ item.Name }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p></p>
+    </div>
+  </body>
+</html>

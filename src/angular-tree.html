@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="styles/main.css" media="all">
+</head>
+<body>
+<div ng-app="myApp">
+  <div ng-controller="myController">
+    
+    <div style="margin:10px 0 30px 0; padding:10px; background-color:#EEEEEE; border-radius:5px; font:12px Tahoma;">
+      <span><b>Selected Node</b> : {{mytree.currentNode.roleName}}</span>
+    </div>
+
+    <hr>   
+    <div>
+      <input ng-model='treeSearchQuery' type="text" placeholder="Search in tree..."/>
+    </div>
+      
+    <!--
+      [TREE attribute]
+      angular-treeview: the treeview directive
+      tree-id : each tree's unique id.
+      tree-model : the tree model on $scope.
+      node-id : each node's id
+      node-label : each node's label
+      node-children: each node's children
+    -->
+    <div
+      data-angular-treeview="true"
+      data-tree-id="mytree"
+      data-tree-model="roleList"
+      data-node-id="roleId"
+      data-node-label="roleName"
+      data-node-children="children"
+      data-search-query='treeSearchQuery'>
+    </div>
+
+  </div>
+</div>
+
+<!-- build:js /scripts/main.js -->
+<!-- bower:js -->
+<script src="_bower_components/angular/angular.js"></script>
+<!-- endbower -->
+
+<script src="angular/tree.js"></script>
+</body>
+</html>
